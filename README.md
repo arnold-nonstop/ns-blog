@@ -1,26 +1,32 @@
-# README
+# NS Blogs
 
-## TODO: Update Readme
+## About
+This is a simple blog web app built using Ruby on Rails. The aim is to get familiar with all the aspects of Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+1. Clone the project
+2. run `bundle install`
+3. run `rails s`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## TODOs
+- [x] Initial skeleton
+- [x] Create posts using scaffold
+- [x] Use rich text editor for the content of post using `action_text`
+- [x] Add validation while creating posts
+- [x] Create comments using resource
+- [x] Associate post and comment
+- [x] Update views to show comments inside relevant post
+- [x] Add view to create post
+- [x] Add validation while creating comment on a post
+- [x] Run migrations
+- [x] Change database from Sqlite3 to pg and vice versa
+- [x] Add authentication using devise
+- [x] Setup login and signup views/links
+- [x] Protect modification of post if user is not logged in
+- [x] Run tests
+- [ ] Prevent user to update and delete other's posts and comments
+- [ ] Improve UI for user experience
+- [ ] Add a custom middleware
+- [ ] Create seeds
+- [ ] Write custom unit tests
+- [ ] Data caching
