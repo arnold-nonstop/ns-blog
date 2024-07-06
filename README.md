@@ -26,7 +26,7 @@ This is a simple blog web app built using Ruby on Rails. The aim is to get famil
 - [x] Run tests
 - [ ] Prevent user to update and delete other's posts and comments
 - [ ] Improve UI for user experience
-- [ ] Add a custom middleware
+- [ ] Create a custom middleware
 - [ ] Create seeds
 - [ ] Write custom unit tests
 - [ ] Data caching
