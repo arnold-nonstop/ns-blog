@@ -28,7 +28,7 @@ This is a simple blog web app built using Ruby on Rails. The aim is to get famil
 - [x] Create post and User association
 - [x] Prevent user to update other's posts
 - [x] Create comment and User association
-- [ ] Show name of commented user
+- [x] Show name of commented user
 - [ ] Improve UI for user experience
 - [ ] Create a custom middleware
 - [ ] Create seeds
