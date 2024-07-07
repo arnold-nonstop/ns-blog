@@ -2,8 +2,13 @@ class CommentsController < ApplicationController
   before_action :set_post
 
   def create
-    @post.comments.create! params.require(:comment).permit(:content)
-    redirect_to @post
+    @comment = @post.comments.build(params.require(:comment).permit(:content))
+    @comment.user = current_user
+    if @comment.save
+      redirect_to @post, note: "Comment added."
+    else
+      redirect_to @post, alert: "Could not add comment."
+    end
   end
 
   private
