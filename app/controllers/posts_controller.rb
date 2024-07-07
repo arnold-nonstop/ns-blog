@@ -18,11 +18,18 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post = Post.find(params[:id])
+    if current_user.id == @post.user_id
+      render "edit"
+    else
+      # TODO: check why alert is not working
+      render :show , alert: "You cannot edit another user's post"
+    end
   end
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save

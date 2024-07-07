@@ -6,7 +6,8 @@ This is a simple blog web app built using Ruby on Rails. The aim is to get famil
 ## Setup
 1. Clone the project
 2. run `bundle install`
-3. run `rails s`
+3. run `rails db:migrate`
+4. run `rails s`
 
 ## TODOs
 - [x] Initial skeleton
@@ -24,7 +25,8 @@ This is a simple blog web app built using Ruby on Rails. The aim is to get famil
 - [x] Setup login and signup views/links
 - [x] Protect modification of post if user is not logged in
 - [x] Run tests
-- [ ] Prevent user to update and delete other's posts and comments
+- [x] Create post and User association
+- [x] Prevent user to update and delete other's posts and comments
 - [ ] Improve UI for user experience
 - [ ] Create a custom middleware
 - [ ] Create seeds
