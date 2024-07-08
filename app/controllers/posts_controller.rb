@@ -26,10 +26,9 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
     if current_user.id == @post.user_id
-      render "edit"
+      render :edit
     else
-      # TODO: check why alert is not working
-      render :show, alert: "You cannot edit another user's post"
+      redirect_to post_url(@post), alert: "You cannot edit another user's post"
     end
   end
 
