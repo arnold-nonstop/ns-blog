@@ -1,5 +1,8 @@
 <div id="<%= dom_id(comment) %>>">
-  <strong><%= comment.user.email %></strong>: <%= comment.content %>
+  <% if comment.user&.email %>
+    <strong><%= comment.user.email %></strong>:
+  <% end %>
+  <%= comment.content %>
   - <%= time_tag comment.created_at, "data-local": "time-ago"  %>
 </div>
 
