@@ -29,7 +29,7 @@ class PostsController < ApplicationController
       render "edit"
     else
       # TODO: check why alert is not working
-      render :show , alert: "You cannot edit another user's post"
+      render :show, alert: "You cannot edit another user's post"
     end
   end
 
