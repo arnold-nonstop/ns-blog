@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  get "posts/my", to: 'posts#my_posts', as: "my_posts"
+
   resources :posts do
     resources :comments
   end
 
   root to: 'posts#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

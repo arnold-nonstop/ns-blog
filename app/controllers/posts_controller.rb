@@ -16,6 +16,11 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def my_posts
+    @posts = current_user.posts
+    render "posts/index", posts: @posts
+  end
+
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
