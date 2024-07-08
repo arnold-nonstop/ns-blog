@@ -18,7 +18,8 @@ class PostsController < ApplicationController
 
   def my_posts
     @posts = current_user.posts
-    render "posts/index", posts: @posts
+    @header = "My Posts"
+    render "posts/index"
   end
 
   # GET /posts/1/edit

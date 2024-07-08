@@ -1,6 +1,6 @@
 <div class="posts-container">
   <%= link_to 'New Post', new_post_path, class: "btn btn-primary new-post" %>
-  <h1>Posts</h1>
+  <h1><%= @header ? @header : "Posts" %></h1>
   <hr>
 
   <% @posts.each do |post| %>
