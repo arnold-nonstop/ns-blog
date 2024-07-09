@@ -3,7 +3,6 @@
   <h1>
     <%= @post.title %>
   </h1>
-
   <p>
     <small>
       <%= time_tag @post.created_at, "data-local": "time-ago" %>
@@ -13,7 +12,5 @@
   <p>
     <%= @post.content %>
   </p>
-
   <%= render 'posts/comments', post: @post %>
-
 </div>
