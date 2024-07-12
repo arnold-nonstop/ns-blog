@@ -3,6 +3,13 @@
   <h1><%= @header ? @header : "Posts" %></h1>
   <hr>
 
+  <% if @posts.length == 0 %>
+    <div class="alert alert-danger" role="alert">
+      You have not created any posts yet
+    </div>
+    <%= link_to "Create New Post", new_post_path, class: "btn btn-primary mt-4" %>
+  <% end %>
+
   <% @posts.each do |post| %>
     <div class="card-body">
       <h5 class="card-title"><%= post.title %></h5>
