@@ -70,7 +70,7 @@ class PostsController < ApplicationController
         format.json { head :no_content }
       end
     else
-      redirect_to post_url(@post), alert: "You authorized to delete this post"
+      redirect_to post_url(@post), alert: "You are not authorized to delete this post"
     end
   end
 

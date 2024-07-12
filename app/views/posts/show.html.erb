@@ -1,5 +1,12 @@
 <div class="show-post">
-  <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-primary float-end"%>
+
+  <% if @post.user&.email == current_user&.email %>
+    <%= link_to 'Delete', @post,
+                method: :delete,
+                data: { confirm: 'Are you sure?' },
+                class: "btn btn-danger float-end" %>
+    <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-primary float-end me-2"%>
+  <% end %>
   <h1>
     <%= @post.title %>
   </h1>
