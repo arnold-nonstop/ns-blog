@@ -21,6 +21,12 @@
     <%= form.rich_text_area :content, class: "form-control" %>
   </div>
 
+  <div class="field mb-3">
+    <%= form.label :status, class: "form-label" %>
+    <%= form.select :status, [%w[Draft draft], %w[Published published]],
+                    {}, {class: "form-select"} %>
+  </div>
+
   <div class="actions">
     <%= form.submit class: "btn btn-primary" %>
   </div>
