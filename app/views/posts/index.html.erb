@@ -5,7 +5,7 @@
 
   <% if @posts.length == 0 %>
     <div class="alert alert-danger" role="alert">
-      You have not created any posts yet
+      No posts to show
     </div>
     <%= link_to "Create New Post", new_post_path, class: "btn btn-primary mt-4" %>
   <% end %>
